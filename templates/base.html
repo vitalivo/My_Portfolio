@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container py-3">
+            <h1 class="text-center">Мое Портфолио</h1>
+            <nav class="navbar navbar-expand-md navbar-dark">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'project_list' %}">Проекты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'skill_list' %}">Навыки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact_form' %}">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main py-5">
+        <div class="container text-center">
+            <div class="profile">
+                <img src="{% static 'images/IMG_20240525_181709.jpg' %}" alt="Мое фото" class="profile-image">
+            </div>
+            {% block content %}
+            <h2>Добро пожаловать в мое портфолио!</h2>
+            <p>Привет! Я джуниор разработчик на языке Python с опытом работы один год.
+                <br> Я изучил Django, HTML, CSS и SQL.
+                <br>В настоящее время я активно учу фронтенд-разработку,
+                <br> чтобы расширить свои навыки и стать более полным веб-разработчиком.
+                <br>Моя цель - постоянно развиваться и улучшать свои навыки в области веб-разработки.</p>
+            <p>Здесь вы найдете информацию о моих проектах, навыках и способах связи.</p>
+            <a href="{% url 'project_list' %}" class="btn btn-primary mt-3">Посмотреть проекты</a>
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer class="footer bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2025 Все права защищены.</p>
+            <p>Свяжитесь со мной: <a href="mailto:vitalivo@gmail.com" class="text-white">vitalivo@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>  
+
