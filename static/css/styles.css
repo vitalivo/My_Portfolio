@@ -7,85 +7,63 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif; /* Используем Google Font */
-    background-color: #f5f5f5;
+    background-color: #2c2c2c; /* Темный фон */
+    color: #f5f5f5; /* Светлый текст */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header {
-    background: linear-gradient(to right, #333, #555);
+.header {
+    background: linear-gradient(to right, #333333, #555);
     color: white;
     padding: 20px 0;
 }
 
-header h1 {
+.header h1 {
     font-size: 36px;
     text-align: center;
 }
 
-.navbar {
+.main-container {
     display: flex;
-    justify-content: center;
-}
-
-.navbar-nav {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.navbar-nav .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #00aced;
-    text-decoration: underline;
-}
-
-/* Основная часть */
-.main {
-    padding: 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col-md-3, .col-md-6, .col-md-9, .col-md-12 {
-    flex: 0 0 100%;
-    padding: 15px;
-}
-
-@media (min-width: 768px) {
-    .col-md-3 {
-        flex: 0 0 25%;
-    }
-    .col-md-6 {
-        flex: 0 0 50%;
-    }
-    .col-md-9 {
-        flex: 0 0 75%;
-    }
-    .col-md-12 {
-        flex: 0 0 100%;
-    }
+    flex: 1;
 }
 
 .sidebar {
-    background-color: #ffffff;
+    width: 250px;
+    background-color: #333333;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar .navbar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 10px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    flex-grow: 1;
 }
 
 .profile-image {
@@ -98,62 +76,21 @@ header h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.about {
-    margin-top: 20px;
-}
-
-.about h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.about p {
-    color: #666;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Карточки */
-.card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.card h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Заголовки секций */
-.section-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Футер */
-footer {
+.footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto;
 }
 
-footer p {
-    margin: 0;
-}
-
-footer a {
+.footer a {
     color: #00aced;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-footer a:hover {
+.footer a:hover {
     color: white;
 }
 
@@ -169,4 +106,61 @@ footer a:hover {
 .btn-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
+}
+
+/* Стили для проектов */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #444; /* Темный фон для карточек */
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h2 {
+    margin-bottom: 20px;
+    color: #f5f5f5; /* Светлый текст */
+}
+
+.project-card p {
+    margin-bottom: 20px;
+    color: #ccc; /* Светлый текст */
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #388E3C; /* Более темный зеленый */
 }
