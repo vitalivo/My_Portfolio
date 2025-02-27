@@ -1,28 +1,28 @@
 <!-- projects/portfolio_list.html -->
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% load static %}
 
 {% block content %}
-  <h1>Проекты:</h1>
+  <h1>{% trans "Проекты:" %}</h1>
   <div class="projects-container">
     <div class="project-card">
-      <h2>Портал новостей</h2>
-      <p>Описание проекта</p>
+      <h2>{% trans "Портал новостей" %}</h2>
+      <p>{% trans "Описание проекта" %}</p>
       <img src="{% static 'images/image1.jpg' %}" alt="Портал новостей">
-      <a href="https://github.com/vitalivo/NEWS_PORTALL.git" class="btn">Посмотреть на GitHub</a>
+      <a href="https://github.com/vitalivo/NEWS_PORTALL.git" class="btn">{% trans "Посмотреть на GitHub" %}</a>
     </div>
     <div class="project-card">
-      <h2>Бот для зоопарка</h2>
-      <p>Описание проекта.</p>
+      <h2>{% trans "Бот для зоопарка" %}</h2>
+      <p>{% trans "Описание проекта." %}</p>
       <img src="{% static 'images/image2.jpg' %}" alt="Бот для зоопарка">
-      <a href="https://github.com/vitalivo/pythonProject_zoo.git" class="btn">Посмотреть на GitHub</a>
+      <a href="https://github.com/vitalivo/pythonProject_zoo.git" class="btn">{% trans "Посмотреть на GitHub" %}</a>
     </div>
     <div class="project-card">
-      <h2>Доска обьявлений</h2>
-      <p>Описание проекта.</p>
+      <h2>{% trans "Доска обьявлений" %}</h2>
+      <p>{% trans "Описание проекта." %}</p>
       <img src="{% static 'images/image3.jpg' %}" alt="Доска обьявлений">
-      <a href="https://github.com/vitalivo/Bulletin_Board_MMORPG-.git" class="btn">Посмотреть на GitHub</a>
+      <a href="https://github.com/vitalivo/Bulletin_Board_MMORPG-.git" class="btn">{% trans "Посмотреть на GitHub" %}</a>
     </div>
   </div>
 {% endblock %}

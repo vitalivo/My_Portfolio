@@ -1,7 +1,7 @@
 <!-- thanks.html -->
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
-  <h1>Спасибо!</h1>
-  <p>Ваше сообщение отправлено.</p>
+  <h1>{% trans "Спасибо!" %}</h1>
+  <p>{% trans "Ваше сообщение отправлено." %}</p>
 {% endblock %}

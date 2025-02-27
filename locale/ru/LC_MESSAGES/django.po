@@ -1,0 +1,197 @@
+# Russian translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Vitaliy <vitalivo@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-27 18:12+0200\n"
+"PO-Revision-Date: 2025-02-27 18:00+0200\n"
+"Last-Translator: Vitaliy <vitalivo@gmail.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\templates\base.html:8
+msgid "Портфолио"
+msgstr "Портфолио"
+
+#: .\templates\base.html:14
+msgid "Добро пожаловать в мое Портфолио"
+msgstr "Добро пожаловать в мое Портфолио"
+
+#: .\templates\base.html:22
+msgid "Главная"
+msgstr "Главная"
+
+#: .\templates\base.html:25
+msgid "Проекты"
+msgstr "Проекты"
+
+#: .\templates\base.html:28
+msgid "Навыки"
+msgstr "Навыки"
+
+#: .\templates\base.html:31 .\templates\contacts\contact_form.html:5
+msgid "Контакты"
+msgstr "Контакты"
+
+#: .\templates\base.html:56
+msgid "Добро пожаловать в мое портфолио!"
+msgstr "Добро пожаловать в мое портфолио!"
+
+#: .\templates\base.html:57
+msgid "Привет! Я джуниор разработчик на языке Python с опытом работы один год."
+msgstr ""
+"Привет! Я джуниор разработчик на языке Python с опытом работы один год."
+
+#: .\templates\base.html:58
+msgid "Я увлекаюсь созданием веб-приложений и веб-сайтов на Python."
+msgstr "Я увлекаюсь созданием веб-приложений и веб-сайтов на Python."
+
+#: .\templates\base.html:59
+msgid "Я изучил Django, HTML, CSS и SQL."
+msgstr "Я изучил Django, HTML, CSS и SQL."
+
+#: .\templates\base.html:60
+msgid ""
+"В настоящее время я активно учу фронтенд-разработку язык JavaScript и "
+"фреймворк React."
+msgstr ""
+"В настоящее время я активно учу фронтенд-разработку язык JavaScript и "
+"фреймворк React."
+
+#: .\templates\base.html:61
+msgid ""
+"Я также изучаю английский язык и участвую в различных онлайн-курсах и "
+"митапах.,"
+msgstr ""
+"Я также изучаю английский язык и участвую в различных онлайн-курсах и "
+"митапах.,"
+
+#: .\templates\base.html:62
+msgid ""
+"Я считаю, что веб-разработка - это не только создание веб-сайтов и "
+"приложений,"
+msgstr ""
+"Я считаю, что веб-разработка - это не только создание веб-сайтов и "
+"приложений,"
+
+#: .\templates\base.html:63
+msgid "но чтобы расширить свои навыки и стать более полным веб-разработчиком."
+msgstr "но чтобы расширить свои навыки и стать более полным веб-разработчиком."
+
+#: .\templates\base.html:64
+msgid ""
+"Моими ценностями являются качество кода, интуитивное понимание логики и "
+"структуры,"
+msgstr ""
+"Моими ценностями являются качество кода, интуитивное понимание логики и "
+"структуры,"
+
+#: .\templates\base.html:65
+msgid ""
+"а также Моя цель - постоянно развиваться и улучшать свои навыки в области "
+"веб-разработки."
+msgstr ""
+"а также Моя цель - постоянно развиваться и улучшать свои навыки в области "
+"веб-разработки."
+
+#: .\templates\base.html:74
+msgid "Все права защищены."
+msgstr "Все права защищены."
+
+#: .\templates\base.html:75
+msgid "Свяжитесь со мной:"
+msgstr "Свяжитесь со мной:"
+
+#: .\templates\contacts\contact_form.html:9
+msgid "Отправить"
+msgstr "Отправить"
+
+#: .\templates\contacts\thanks.html:5
+msgid "Спасибо!"
+msgstr "Спасибо!"
+
+#: .\templates\contacts\thanks.html:6
+msgid "Ваше сообщение отправлено."
+msgstr "Ваше сообщение отправлено."
+
+#: .\templates\portfolio_app\portfolio_list.html:7
+#, fuzzy
+#| msgid "Проекты"
+msgid "Проекты:"
+msgstr "Проекты"
+
+#: .\templates\portfolio_app\portfolio_list.html:10
+msgid "Портал новостей"
+msgstr "Портал новостей"
+
+#: .\templates\portfolio_app\portfolio_list.html:11
+msgid "Описание проекта"
+msgstr "Описание проекта"
+
+#: .\templates\portfolio_app\portfolio_list.html:13
+#: .\templates\portfolio_app\portfolio_list.html:19
+#: .\templates\portfolio_app\portfolio_list.html:25
+msgid "Посмотреть на GitHub"
+msgstr "Посмотреть на GitHub"
+
+#: .\templates\portfolio_app\portfolio_list.html:16
+msgid "Бот для зоопарка"
+msgstr "Бот для зоопарка"
+
+#: .\templates\portfolio_app\portfolio_list.html:17
+#: .\templates\portfolio_app\portfolio_list.html:23
+msgid "Описание проекта."
+msgstr "Описание проекта."
+
+#: .\templates\portfolio_app\portfolio_list.html:22
+msgid "Доска обьявлений"
+msgstr "Доска обьявлений"
+
+#: .\templates\skills\skill_list.html:9
+msgid "Сертификаты"
+msgstr "Сертификаты"
+
+#: .\templates\skills\skill_list.html:12
+msgid "Django"
+msgstr "Django"
+
+#: .\templates\skills\skill_list.html:14 .\templates\skills\skill_list.html:22
+#: .\templates\skills\skill_list.html:32
+msgid "Сертификат 1"
+msgstr "Сертификат 1"
+
+#: .\templates\skills\skill_list.html:15 .\templates\skills\skill_list.html:23
+#: .\templates\skills\skill_list.html:33
+msgid "Сертификат 2"
+msgstr "Сертификат 2"
+
+#: .\templates\skills\skill_list.html:16 .\templates\skills\skill_list.html:24
+#: .\templates\skills\skill_list.html:34
+msgid "Сертификат 3"
+msgstr "Сертификат 3"
+
+#: .\templates\skills\skill_list.html:20
+msgid "Python"
+msgstr "Python"
+
+#: .\templates\skills\skill_list.html:25
+msgid "Сертификат 4"
+msgstr "Сертификат 4"
+
+#: .\templates\skills\skill_list.html:26
+msgid "Сертификат 5"
+msgstr "Сертификат 5"
+
+#: .\templates\skills\skill_list.html:30
+msgid "SQL, HTML, CSS, JS"
+msgstr "SQL, HTML, CSS, JS"

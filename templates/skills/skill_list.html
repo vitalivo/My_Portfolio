@@ -1,34 +1,37 @@
+
 {% extends 'base.html' %}
+
+{% load i18n %}
 
 {% load static %}
 
 {% block content %}
-    <h1>Сертификаты</h1>
+    <h1>{% trans "Сертификаты" %}</h1>
     <div class="skills-container">
         <div class="skill-card">
-            <h3>Django</h3>
+            <h3>{% trans "Django" %}</h3>
             <div class="certificates">
-                <a href="{% static 'certificates_stepik/stepik-certificate-114288-e8613c6.pdf' %}" target="_blank">Сертификат 1</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-174634-3e1ecb8.pdf' %}" target="_blank">Сертификат 2</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-177355-0255644.pdf' %}" target="_blank">Сертификат 3</a>
+                <a href="{% static 'certificates_stepik/stepik-certificate-114288-e8613c6.pdf' %}" target="_blank">{% trans "Сертификат 1" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-174634-3e1ecb8.pdf' %}" target="_blank">{% trans "Сертификат 2" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-177355-0255644.pdf' %}" target="_blank">{% trans "Сертификат 3" %}</a>
             </div>
         </div>
         <div class="skill-card">
-            <h3>Python</h3>
+            <h3>{% trans "Python" %}</h3>
             <div class="certificates">
-                <a href="{% static 'certificates_stepik/stepik-certificate-58852-49a7d5b.pdf' %}" target="_blank">Сертификат 1</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-63085-06f828d.pdf' %}" target="_blank">Сертификат 2</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-68343-f5d596a.pdf' %}" target="_blank">Сертификат 3</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-100707-f548a27.pdf' %}" target="_blank">Сертификат 4</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-114354-aae65b5.pdf' %}" target="_blank">Сертификат 5</a>
+                <a href="{% static 'certificates_stepik/stepik-certificate-58852-49a7d5b.pdf' %}" target="_blank">{% trans "Сертификат 1" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-63085-06f828d.pdf' %}" target="_blank">{% trans "Сертификат 2" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-68343-f5d596a.pdf' %}" target="_blank">{% trans "Сертификат 3" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-100707-f548a27.pdf' %}" target="_blank">{% trans "Сертификат 4" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-114354-aae65b5.pdf' %}" target="_blank">{% trans "Сертификат 5" %}</a>
             </div>
         </div>
         <div class="skill-card">
-            <h3>SQL, HTML, CSS, JS</h3>
+            <h3>{% trans "SQL, HTML, CSS, JS" %}</h3>
             <div class="certificates">
-                <a href="{% static 'certificates_stepik/stepik-certificate-51562-a4eee17.pdf' %}" target="_blank">Сертификат 1</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-120494-9e5dc8d.pdf' %}" target="_blank">Сертификат 2</a><br>
-                <a href="{% static 'certificates_stepik/stepik-certificate-135466-6340181.pdf' %}" target="_blank">Сертификат 3</a>
+                <a href="{% static 'certificates_stepik/stepik-certificate-51562-a4eee17.pdf' %}" target="_blank">{% trans "Сертификат 1" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-120494-9e5dc8d.pdf' %}" target="_blank">{% trans "Сертификат 2" %}</a><br>
+                <a href="{% static 'certificates_stepik/stepik-certificate-135466-6340181.pdf' %}" target="_blank">{% trans "Сертификат 3" %}</a>
             </div>
         </div>
     </div>

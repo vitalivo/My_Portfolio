@@ -1,17 +1,17 @@
+{% load i18n %}
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
+    <title>{% trans "Портфолио" %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header class="header">
         <div class="container py-3">
-            <h1 class="text-center">Мое Портфолио</h1>
+            <h1 class="text-center">{% trans "Добро пожаловать в мое Портфолио" %}</h1>
         </div>
     </header>
 
@@ -19,16 +19,32 @@
         <nav class="sidebar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}">Главная</a>
+                    <a class="nav-link" href="{% url 'index' %}">{% trans "Главная" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'project_list' %}">Проекты</a>
+                    <a class="nav-link" href="{% url 'project_list' %}">{% trans "Проекты" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'skill_list' %}">Навыки</a>
+                    <a class="nav-link" href="{% url 'skill_list' %}">{% trans "Навыки" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact_form' %}">Контакты</a>
+                    <a class="nav-link" href="{% url 'contact_form' %}">{% trans "Контакты" %}</a>
+                </li>
+                <li class="nav-item">
+                    <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %} <!-- Не забываем по csrf_token для POST запросов -->
+                        <input type="hidden" name="next" value="{{ redirect_to }}">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <select name="language" id="">
+                            {% get_available_languages as LANGUAGES %} <!-- получаем языки -->
+                            {% get_language_info_list for LANGUAGES as languages %} <!-- Помещаем их в список languages -->
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% for language in languages %} <!-- Итерируясь по списку, выводим их название на языке пользователя и код -->
+                                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                    {{ language.name_local }} - {{ language.code }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </form>
                 </li>
             </ul>
         </nav>
@@ -39,13 +55,16 @@
                     <img src="{% static 'images/IMG_20240525_181709.jpg' %}" alt="Мое фото" class="profile-image">
                 </div>
                 {% block content %}
-                <h2>Добро пожаловать в мое портфолио!</h2>
-                <p>Привет! Я джуниор разработчик на языке Python с опытом работы один год.
-                    <br> Я изучил Django, HTML, CSS и SQL.
-                    <br>В настоящее время я активно учу фронтенд-разработку язык JavaScript и фреймворк React.
-                    <br>Я также изучаю английский язык и участвую в различных онлайн-курсах и митапах.,
-                    <br> чтобы расширить свои навыки и стать более полным веб-разработчиком.
-                    <br>Моя цель - постоянно развиваться и улучшать свои навыки в области веб-разработки.
+                <h2>{% trans "Добро пожаловать в мое портфолио!" %}</h2>
+                <p>{% trans "Привет! Я джуниор разработчик на языке Python с опытом работы один год." %}
+                    <br> {% trans "Я увлекаюсь созданием веб-приложений и веб-сайтов на Python." %}
+                    <br> {% trans "Я изучил Django, HTML, CSS и SQL." %}
+                    <br>{% trans "В настоящее время я активно учу фронтенд-разработку язык JavaScript и фреймворк React." %}
+                    <br>{% trans "Я также изучаю английский язык и участвую в различных онлайн-курсах и митапах.," %}
+                    <br>{% trans "Я считаю, что веб-разработка - это не только создание веб-сайтов и приложений," %}
+                    <br>{% trans "но чтобы расширить свои навыки и стать более полным веб-разработчиком." %}
+                    <br>{% trans "Моими ценностями являются качество кода, интуитивное понимание логики и структуры," %}
+                    <br>{% trans "а также Моя цель - постоянно развиваться и улучшать свои навыки в области веб-разработки." %}
                 </p>
                 {% endblock %}
             </div>
@@ -54,12 +73,21 @@
 
     <footer class="footer bg-dark text-white py-3">
         <div class="container text-center">
-            <p>&copy; 2025 Все права защищены.</p>
-            <p>Свяжитесь со мной: <a href="mailto:vitalivo@gmail.com" class="text-white">vitalivo@gmail.com</a></p>
+            <p>© {% trans "Все права защищены." %}</p>
+            <p>{% trans "Свяжитесь со мной:" %}<a href="mailto:vitalivo@gmail.com" class="text-white">vitalivo@gmail.com</a></p>
         </div>
     </footer>
 
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelect = document.querySelector('select[name="language"]');
+            if (languageSelect) {
+                languageSelect.addEventListener('change', function() {
+                    this.form.submit();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
-
